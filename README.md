@@ -397,24 +397,6 @@ GROQ_API_KEY=your_api_key_here
 
 ---
 
-## ☁️ Deployment
-
-The application is deployed using **Streamlit**.
-
-### Live Application
-
-https://infominer-ai.streamlit.app/
-
-The deployed version provides the same conversational interface for:
-
-* PDF-based information retrieval
-* URL-based information retrieval
-* General AI questions
-* RAG-powered responses
-* Conversational interaction
-
----
-
 ## 🎯 Use Cases
 
 InfoMiner-AI can be useful for:
@@ -437,70 +419,8 @@ Potential improvements for future versions include:
 * Improved webpage extraction for JavaScript-heavy websites
 * Conversation export functionality
 * User authentication
-* Multiple independent knowledge bases
 * More advanced source citations
 * Document preview and page navigation
-* Configurable retrieval parameters
-* Support for additional LLM providers
-* Enhanced document metadata filtering
-
----
-
-## 🧩 Core Architecture
-
-InfoMiner-AI separates the application interface from the RAG processing logic.
-
-```text
-                 ┌───────────────────┐
-                 │    Streamlit UI   │
-                 │      app.py       │
-                 └─────────┬─────────┘
-                           │
-                           ▼
-                 ┌───────────────────┐
-                 │   RAG Engine      │
-                 │  rag_engine.py   │
-                 └─────────┬─────────┘
-                           │
-             ┌─────────────┼─────────────┐
-             ▼             ▼             ▼
-         ┌────────┐   ┌─────────┐   ┌──────────┐
-         │  PDF   │   │   URL   │   │ General  │
-         │Extract │   │ Scraper │   │ Question │
-         └────┬───┘   └────┬────┘   └─────┬────┘
-              │            │              │
-              └────────────┼──────────────┘
-                           ▼
-                 ┌───────────────────┐
-                 │ Document Chunking │
-                 └─────────┬─────────┘
-                           ▼
-                 ┌───────────────────┐
-                 │    FastEmbed      │
-                 └─────────┬─────────┘
-                           ▼
-                 ┌───────────────────┐
-                 │  FAISS Vector DB  │
-                 └─────────┬─────────┘
-                           ▼
-                 ┌───────────────────┐
-                 │ Similarity Search │
-                 └─────────┬─────────┘
-                           ▼
-                 ┌───────────────────┐
-                 │    Groq LLM       │
-                 └─────────┬─────────┘
-                           ▼
-                 ┌───────────────────┐
-                 │ Streaming Answer  │
-                 └───────────────────┘
-```
-
----
-
-## 👨‍💻 Project
-
-**InfoMiner-AI** is a practical implementation of a conversational RAG system combining document processing, web information extraction, semantic search, vector databases, and generative AI into a single interactive application.
 
 ---
 
