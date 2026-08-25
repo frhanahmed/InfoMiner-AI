@@ -1,0 +1,32 @@
+# Environment & Secrets (Crucial: Prevents exposing API keys)
+.env
+.env.local
+.env.*
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Streamlit Local Configurations
+.streamlit/secrets.toml
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Vector Index & Cache Dumps (FastEmbed / Local vector persistence)
+.cache/
+fastembed_cache/
+faiss_index/
+*.faiss
+*.pkl

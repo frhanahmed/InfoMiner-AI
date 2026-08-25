@@ -1,0 +1,11 @@
+streamlit
+groq
+python-dotenv
+pypdf
+beautifulsoup4
+requests
+langchain-text-splitters
+langchain-community
+langchain-core
+fastembed
+faiss-cpu
